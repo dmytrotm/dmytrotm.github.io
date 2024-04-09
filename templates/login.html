@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../static/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/styles.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container center">
+      <div class="wrapper thinner">
+        <form method="POST">
+          <h1>Login</h1>
+          <div class="input-box">
+            <input type="text" placeholder="Email" id="email" name="email" />
+            <i class="bx bxs-user"></i>
+          </div>
+
+          <div class="input-box error">
+            <input
+              type="password"
+              placeholder="Password"
+              id="password"
+              name="password"
+            />
+            <i class="bx bxs-lock-alt"></i>
+            <span class="error_message">Wrong password!</span>
+          </div>
+
+          <div class="remember-forgot">
+            <a href="forgot-password.html">Forgot Password</a>
+          </div>
+
+          <!-- <button type="submit" class="btn">Login</button> -->
+          <a href="home.html" class="btn center">Login</a>
+          <div class="register-link">
+            <p>Don't have an account? <a href="sign-up.html">Sign up</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

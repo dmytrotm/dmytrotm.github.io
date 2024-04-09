@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../static/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../static/styles.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" id="home" href="home.html">Home</a>
+          <a class="nav-item nav-link" id="logout" href="login.html">Logout</a>
+          <a class="nav-item nav-link" id="user_page" href="user_page.html"
+            >User page</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 align="center">Diaries</h1>
+
+      <div class="diaries">
+        <div class="wrapper">
+          <!-- Shared diaries -->
+          <h2>Shared Diaries:</h2>
+          <ul class="list-group list-group-flush" id="shared-diaries">
+            <li class="list-group-item">
+              <a href="shared_user_diary.html">fuuuuuuuuuuu </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="wrapper">
+          <h2>Your Diaries:</h2>
+          <ul class="list-group list-group-flush" id="diaries">
+            <li class="list-group-item">
+              <div class="diary">
+                <a href="diary_notes.html">lalala</a>
+
+                <button type="button" class="close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#shareDiaryModal{{ diary.id }}"
+              >
+                Share
+              </button>
+            </li>
+
+            <!-- Modal for sharing diary -->
+            <div
+              class="modal"
+              id="shareDiaryModal{{ diary.id }}"
+              role="dialog"
+              aria-labelledby="shareDiaryModalLabel{{ diary.id }}"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5
+                      class="modal-title"
+                      id="shareDiaryModalLabel{{ diary.id }}"
+                    >
+                      Share Diary
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form method="POST">
+                      <div class="form-group">
+                        <label for="recipientEmail">Recipient Email:</label>
+                        <input
+                          style="color: #333; border-color: #f2f2f2 !important"
+                          type="email"
+                          class="form-control"
+                          id="recipientEmail"
+                          name="recipient_email"
+                          required
+                        />
+                      </div>
+                      <button type="submit" class="btn btn-primary">
+                        Share
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <!-- Form to add a new diary -->
+        <form method="POST">
+          <textarea name="diary" id="diary" class="form-control"></textarea>
+          <br />
+          <div>
+            <button type="submit" class="btn btn-primary">Add Diary</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

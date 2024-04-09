@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../static/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../static/styles.css" />
+    <title>User page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" id="home" href="home.html">Home</a>
+          <a class="nav-item nav-link" id="logout" href="login.html">Logout</a>
+          <a class="nav-item nav-link" id="user_page" href="user_page.html">User page</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Welcome, Khrushch!</h1>
+      <div class="wrapper">
+        <h2>Info</h2>
+        <p>Email: kholonyi_khrushch@gmail.com</p>
+      </div>
+      <div class="wrapper">
+        <h2>Manage Your Account</h2>
+        <form method="POST" action="/user" class="mb-4">
+          <div class="list">
+            <div class="option">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                value="Khruhch"
+                required
+              />
+            </div>
+
+            <div class="option">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value="kholonyi_khrushch@gmail.com"
+                required
+              />
+            </div>
+
+            <div class="option">
+              <label for="password">New Password (optional)</label>
+              <input type="password" id="password" name="password" />
+            </div>
+          </div>
+
+          <button class="btn" type="submit">Update</button>
+        </form>
+      </div>
+      <div class="wrapper">
+        <h2>Delete Your Account</h2>
+        <button class="btn">Delete Account</button>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
