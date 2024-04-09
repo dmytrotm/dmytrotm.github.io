@@ -181,6 +181,12 @@ i {
 
 .diaries {
   display: flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .diaries {
+    flex-direction: column;
+  }
 }
 
 .modal-backdrop {

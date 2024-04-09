@@ -179,6 +179,11 @@ i {
 }
 .diaries {
   display: flex;
+  flex-direction: row; // Default layout for larger screens
+
+  @media (max-width: 768px) {
+    flex-direction: column; // Change to column layout for smaller screens
+  }
 }
 .modal-backdrop {
   display: none;
